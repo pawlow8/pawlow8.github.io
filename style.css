@@ -56,7 +56,7 @@ header .site-menu {
 }
 
 @media (min-width: 1400px) {
-    header .site-menu,  {
+    header .site-menu, .head-contact {
         margin-left: 50px;
     }
 }
