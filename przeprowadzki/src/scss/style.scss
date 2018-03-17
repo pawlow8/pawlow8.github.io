@@ -255,7 +255,7 @@ main {
         background: $base-blue;
         flex-direction: column;
         align-items: flex-end;
-        max-width: 500px;
+        max-width: 400px;
         padding-bottom: 40px;
         padding-top: 40px;
         .side-menu {
@@ -420,7 +420,7 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 150%;
+        height: 170%;
         max-height: 837px;
         left: 0;
     }
@@ -440,7 +440,7 @@ footer {
         .footer-tags_box {
             margin-top: 40px;
             padding-right: 40px;
-            font-size: 16px;
+            font-size: 14px;
             h3 {
                 font-weight: 700;
                 color: #000000;
@@ -454,6 +454,9 @@ footer {
                     }
                 }
             }
+        }
+        .footer-tags_box:last-child {
+            padding-right: 0;
         }
     }
     .footer-description {
@@ -496,8 +499,7 @@ main.about {
     padding-right: 0;
     section {
         max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 150px;
         padding-top: 60px;
         .small-container-about-text {
             max-width: 600px;
@@ -561,7 +563,7 @@ main.about {
             }
         }
         .small-container-about-info {
-            max-width: 400px;
+            max-width: 350px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -818,17 +820,42 @@ section.clients {
 
 @media (max-width: 1516px) {
     main.about section {
-        padding-left: 3%;
-        padding-right: 3%;
-        max-width: 1500px;
-        margin: 0;
-        flex-direction: column;
+        margin-left: 3%;
     }
     main.about section .small-container-about-text.offer p {
-        padding-right: 0;
+        padding-right: 3%;
     }
-    main .small-container-about-text p {
-        padding-right: 0;
+    main.about section .small-container-about-info {
+        max-width: 300px;
+        margin-top: 44px;
+    }
+    main.about section .small-container-about-info a {
+        padding-left: 0;
+    }
+    main.about section .small-container-about-text {
+        max-width: 500px;
+    }
+    main .small-container-about-text h3 b {
+        font-size: 32px;
+    }
+    main.about section .small-about-box {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    main.about section .small-about-box img {
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    main.about section .small-about-box p b {
+        display: block;
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    main.about section .small-container-about-info p.small-container-about-info_paragraph {
+        text-align: center;
     }
 }
 
@@ -850,6 +877,9 @@ section.clients {
     }
     .main-page header:before {
         top: 140px;
+    }
+    .small-offer-box {
+        max-width: 600px;
     }
 }
 
@@ -940,6 +970,53 @@ section.clients {
     .banner-container_box--block.primary-block .main-offer_rowbx--block {
         margin-top: 79px;
     }
+    header .main-header_refer p {
+        text-align: center;
+    }
+    main.about section {
+        flex-direction: column;
+    }
+    main.about section .small-container-about-info {
+        max-width: 500px;
+        img {
+            margin-right: auto;
+        }
+    }
+    main.about section .small-about-box {
+        flex-direction: row;
+        justify-content: flex-start;
+        img {
+            margin-right: 20px;
+        }
+    }
+    main.about section .small-about-box p b {
+        text-align: left;
+    }
+}
+
+@media (max-width: 960px) {
+    main.about section .small-container-about-text,
+    main.about section .small-container-about-info {
+        max-width: 400px;
+    }
+    main.about section .small-container-about-text {
+        img {
+            margin-right: auto;
+        }
+    }
+    main.about section .small-about-box {
+        flex-direction: row;
+        justify-content: flex-start;
+        img {
+            margin-right: 20px;
+        }
+    }
+    main.about section .small-about-box p b {
+        text-align: left;
+    }
+    main aside {
+        max-width: 350px;
+    }
 }
 
 @media (max-width: 868px) {
@@ -957,6 +1034,39 @@ section.clients {
         display: flex;
         justify-content: center;
     }
+    main.about {
+        width: 100%;
+        aside {
+            max-width: 100%;
+            width: 100%;
+            align-items: center;
+            .side-menu {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 600px;
+                li {
+                    max-width: 100%;
+                }
+            }
+            h3,
+            p {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    header.about h2 {
+        padding-left: 3%;
+    }
+    main.about section .small-container-about-text, 
+        main.about section .small-container-about-info {
+            max-width: 100%;
+        }
+        main.about section .small-about-box p {
+            max-width: 250px;
+            width: 100%;
+        }
 }
 
 @media (min-width: 640px) {
@@ -1023,7 +1133,22 @@ section.clients {
     }
 }
 
+@media (min-width: 869px) and (max-width: 1254px) {
+    main.about section .small-container-about-text {
+        max-width: 400px;
+    }
+    main.about section .small-container-about-info {
+        margin-top: 76px;
+    }
+}
 
+@media (min-width: 961px) and (max-width: 1170px) {
+    main.about section {
+        .small-container-about-text {
+            max-width: 500px;
+        }
+    }
+}
 
 @media (max-width: 639px) {
     .main-page header:before {
@@ -1068,14 +1193,13 @@ section.clients {
         margin-right: auto;
         margin-top: 20px;
         margin-bottom: 0;
+    }
 }
-} 
+
 @media (max-width: 504px) {
     .main-page header:before {
-        
         min-height: 1006px;
     }
-    
 }
 
 @media (max-width: 330px) {
