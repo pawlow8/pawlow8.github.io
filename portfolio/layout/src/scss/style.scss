@@ -1,0 +1,107 @@
+$body-color: #ced4da;
+$link-color: #ced4da;
+$line-height-base: 1.2;
+$link-hover-color: #FFF;
+$navbar-nav-link-padding-x: 1.5rem;
+$navbar-brand-font-size: 1.2rem;
+$display4-size:  3rem;
+$display4-weight: 700;
+$display-line-height: 1.5;
+$jumbotron-bg: transparent;
+$headings-color:#FFF;
+$btn-border-radius-lg: 0;
+$font-size-lg: 1rem;
+$btn-line-height-lg: 1.2;
+$btn-padding-x-lg: 2.5rem;
+$btn-padding-y-lg: 1rem;
+$lead-font-weight: 500;
+$navbar-padding-y: 1rem;
+$h2-font-size: 2.5rem;
+$headings-font-weight: 700;
+$secondary: #000;
+$btn-font-weight: 500;
+$figure-caption-color: #a09279;
+$theme-colors: (
+    "primary": #FFF
+);
+@import "node_modules/bootstrap/scss/bootstrap";
+header {
+    min-height: 100vh;
+    background: url('../assets/main-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .navbar {
+        .navbar-toggler-icon {
+            width: 1em;
+            height: 1em;
+            font-size: 1.2em;
+        }
+        .navbar-brand, 
+        .navbar-nav .nav-item.active .nav-link{
+            color: $white;
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .jumbotron {
+        
+        .btn {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+main {
+    h6, .lead {
+        color: #a09279;
+        font-weight: 500;
+    }
+    h2, h4 {
+        color: #000;
+    }
+}
+
+footer {
+    background-image: url('../assets/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    p {
+        line-height: 1.5;
+    }
+    h6 {
+        font-weight: 500;
+    }
+    hr {
+       border: 0.5px solid #808080;
+    }
+    .social-icons {
+        .col {
+            max-width: 40px;
+            height: 40px;
+            border: 0.5px solid #808080;
+            background: $black;
+            display: flex;
+            justify-content: center;
+            i {
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .jumbotron {
+        padding: 8rem 4rem;
+    }
+    .social-icons {
+        justify-content: space-around;
+    }
+}   
