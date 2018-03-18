@@ -612,6 +612,12 @@ main.about {
                     max-width: 320px;
                 }
             }
+            .offer-bg-link.prv {
+                height: 500px;
+                background: url('../img/bg-offer-side2.png');
+                background-size: cover;
+                background-position: center;
+            }
         }
         .small-about-box {
             color: $base-blue;
@@ -737,6 +743,142 @@ section.clients {
     }
 }
 
+main.about {
+    section.contact {
+        .small-container-about-text {
+            p {
+                font-weight: 700;
+                line-height: 1.2;
+                font-size: 15px;
+            }
+        }
+        .small-container-about-info {
+            max-width: 330px;
+            a {
+                padding-left: 10px;
+                padding-right: 30px;
+                text-align: left;
+                max-width: 330px;
+            }
+        }
+        .small-about-box {
+            position: relative;
+            height: 400px;
+            margin-bottom: 0;
+            .consultant {
+                max-width: 330px;
+                width: 100%;
+                height: 100%;
+            }
+            .phone-consultant {
+                position: absolute;
+                z-index: 2;
+            }
+            p.phone-consultant {
+                bottom: 50px;
+                max-width: 300px;
+                background-color: $base-red;
+                color: #fff;
+                padding: 20px;
+                font-weight: 700;
+            }
+            a.phone-consultant {
+                bottom: 0px;
+                max-width: 150px;
+            }
+        }
+        .small-about-box.map {
+            height: auto;
+            img {
+                max-width: 330px;
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: -80px;
+                z-index: 1;
+            }
+            p {
+                background-color: $base-red;
+                color: #fff;
+                padding: 20px;
+                position: absolute;
+                top: 100px;
+                z-index: 3;
+                font-weight: 700;
+            }
+        }
+        form {
+            max-width: 500px;
+            width: 100%;
+            padding-right: 15px;
+            input[type="text"] {
+                display: inline-block;
+                margin-right: 15px;
+                max-width: 230px;
+                width: 100%;
+            }
+            input.mail-phone {
+                margin-right: 0;
+            }
+            input[type="text"],
+            textarea {
+                padding: 15px;
+                color: #666666;
+                background-color: #f1f1f1;
+                margin-bottom: 20px;
+            }
+            input,
+            textarea {
+                outline: 0;
+                border: 0;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            textarea {
+                width: 100%;
+                min-height: 300px;
+                display: block;
+            }
+            input[type="submit"] {
+                padding: 20px;
+                background-color: $base-red;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+main {
+    aside {
+        .conact-info {
+            margin-bottom: 40px;
+            max-width: 280px;
+            width: 100%;
+            .contact-info_block {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                p {
+                    margin-top: 0;
+                    font-size: 14px;
+                    a {
+                        color: #ffffff;
+                    }
+                }
+                img {
+                    margin-right: 15px;
+                    width: 35px;
+                }
+                .contact-info_block--text p {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
 .banner-container_box--block.primary-block .main-offer_rowbx--block {
     margin-top: 40px;
 }
@@ -822,6 +964,9 @@ section.clients {
     main.about section {
         margin-left: 3%;
     }
+    main.about section.contact {
+        margin-left: 2%;
+    }
     main.about section .small-container-about-text.offer p {
         padding-right: 3%;
     }
@@ -832,8 +977,12 @@ section.clients {
     main.about section .small-container-about-info a {
         padding-left: 0;
     }
-    main.about section .small-container-about-text {
+    main.about section .small-container-about-text,
+    main.about section .small-container-about-text.career {
         max-width: 500px;
+    }
+    section.clients .small-container-about-text.clients {
+        max-width: 700px;
     }
     main .small-container-about-text h3 b {
         font-size: 32px;
@@ -878,8 +1027,10 @@ section.clients {
     .main-page header:before {
         top: 140px;
     }
-    .small-offer-box {
-        max-width: 600px;
+    main .small-offer-box .small-offer-box_block {
+        max-width: 280px;
+        padding: 20px 0 20px 20px;
+        font-size: 14px;
     }
 }
 
@@ -922,14 +1073,6 @@ section.clients {
     }
     .small-offer-box {
         margin-top: 40px;
-    }
-    main .small-offer-box .small-offer-box_block {
-        max-width: 400px;
-        padding: 30px;
-        font-size: 16px;
-        .img-box {
-            max-width: 150px;
-        }
     }
     .small-header_menu,
     .banner-container_box--block.primary-block .main-offer_rowbx--block,
@@ -1059,20 +1202,31 @@ section.clients {
     header.about h2 {
         padding-left: 3%;
     }
-    main.about section .small-container-about-text, 
-        main.about section .small-container-about-info {
-            max-width: 100%;
-        }
-        main.about section .small-about-box p {
-            max-width: 250px;
-            width: 100%;
-        }
+    main.about section .small-container-about-text,
+    main.about section .small-container-about-info {
+        max-width: 100%;
+    }
+    main.about section .small-about-box p {
+        max-width: 250px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 640px) {
     header .main-header_menu ul {
         flex-direction: row;
         width: auto;
+    }
+}
+
+@media (max-width: 612px) {
+    main .small-offer-box .small-offer-box_block {
+        max-width: 400px;
+        padding: 30px;
+        font-size: 16px;
+        .img-box {
+            max-width: 150px;
+        }
     }
 }
 
@@ -1117,6 +1271,26 @@ section.clients {
 @media (max-width: 480px) {
     header .small-header_menu ul li a {
         width: 250px;
+    }
+}
+
+@media (max-width: 431px) {
+    .main-offer_rowbx--block,
+    .main-offer_rowbx--block h4 {
+        max-width: 100%;
+    }
+    .banner-container_box--block.primary-block .main-offer_rowbx--block {
+        margin-top: 1px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .main-offer_rowbx--block h4 {
+        font-size: 20px;
+    }
+    .main-offer_rowbx--block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 }
 

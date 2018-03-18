@@ -12,13 +12,13 @@
 
 <body>
     <!--- Naglowek strony ---->
-    <header>
+    <header class="about">
         <div class="main-header container">
             <a href="index.html" class="main-header_logo">
                 <img src="./img/logo.png" alt="Przeprowadzki.com.pl">
             </a>
             <nav class="main-header_menu">
-                <ul>
+                <ul class="container">
                     <li>
                         <a href="onas.html">O nas</a>
                     </li>
@@ -61,8 +61,8 @@
         <h2>Aliquam lacus lectus, tristique ut luctus ut, interdum quis enim.</h2>
     </header>
     <!--- Content podstrony ---->
-    <main class="container">
-        <aside>
+    <main class="container about">
+        <aside class="container">
             <div class="conact-info">
                 <div class="contact-info_block container">
                     <img src="./img/ico-contact1.png" alt="">
@@ -89,46 +89,31 @@
             <h3>Sed vitae massa pretium, sod ales justo at, blandit turpis elunas zara. </h3>
             <p>Proin et augue nec turpis dignissim suscipit id sit amet orci. Etiam sagittis consequat.</p>
         </aside>
-        <section class="container">
+        <section class="container contact">
             <div class="small-container-about-text">
                 <h3>
                     Zachęcamy
                     <b>do kontaktu z naszą firmą</b>
                 </h3>
+                <p>
+                    Vestibulum et nisi libero. Donec elementum arcu et ante blandit, et sollicitudin
+                    risus sodales. Proin a elit a odio fermentum suscipit a elementum ex.
+                </p>
                <form action="">
                    <input type="text" name="" id="" placeholder="Imię i nazwisko">
-                   <input type="text" name="" id="" placeholder="Adres e-mail/nr telefonu">
+                   <input class="mail-phone" type="text" name="" id="" placeholder="Adres e-mail/nr telefonu">
                    <textarea name="" id="" placeholder="Twoja wiadomość"></textarea>
                    <input type="submit" value="Wyślij wiadomość">
                </form>
             </div>
             <div class="small-container-about-info">
-                <a href="#">Zobacz co możemy dla Ciebie zrobić</a>
-                <p class="small-container-about-info_paragraph">
-                    Praesent ut feugiat leo, a pellentesque quam. Pellentesque rutrum lacinia aliquam. Proin et augue nec turpis dignissim suscipit
-                    id sit amet orci.
-                </p>
+                <a href="#">Szybka odpowiedź na Twoje pytanie</a>
                 <div class="small-about-box">
-                    <img src="./img/ico-small-about1.png" alt="">
-                    <p>
-                        <b>15 lat</b>
-                        Doświadczenia
-                    </p>
-                </div>
-                <div class="small-about-box">
-                    <img src="./img/ico-small-about2.png" alt="">
-                    <p>
-                        <b>70</b>
-                        Zrealizowanych przeprowadzek
-                    </p>
-                </div>
-                <div class="small-about-box">
-                    <h5>Szybka odpowiedż na Twoje pytanie</h5>
                     <img src="./img/img-consultant.png" alt="" class="consultant">
-                    <p>Zadzwoń do naszego konsultanta</p>
-                    <a href="tel:+48 500 650 800">+48 500 650 800</a>
+                    <p class="phone-consultant">Zadzwoń do naszego konsultanta</p>
+                    <a class="phone-consultant" href="tel:+48 500 650 800">+48 500 650 800</a>
                 </div>
-                <div class="small-about-box">
+                <div class="small-about-box map">
                     <img src="./img/img-map.png" alt="">
                     <p>Działamy na terenie całej europy</p>
                 </div>
