@@ -61,37 +61,69 @@
         <h2>Aliquam lacus lectus, tristique ut luctus ut, interdum quis enim.</h2>
     </header>
     <!--- Content podstrony ---->
-    <main class="container about">
+    <main class="container about price">
         <aside class="container">
-            <img src="img/ico-wycena.png" alt="">
-            <h4>Sed vitae massa pretium, sod ales justo at, blandit turpis elunas zara.</h4>
+            <div class="side-price container">
+                    <img src="img/ico-wycena.png" alt="">
+                    <h4>Sed vitae massa <br> pretiumod</h4>
+            </div>
             <h5>Proin et augue nec turpis dignissim suscipit id sit amet orci. Etiam sagittis consequat.</h5>
             <img src="./img/img-side3.png" alt="">
             <p>Jesteśmy uznaną w branży marką i długo pracujemy na swoją renomę, podejmując się realizacji skomplikowanych zleceń.</p>
         </aside>
-        <section class="container">
-            <div class="small-container-about-text">
+        <section class="container price">
+            <div class="small-container-about-text price">
                 <h3>
                     Sprawdź
                     <b>ile zapłacisz za przeprowadzkę</b>
                 </h3>
                 <p>Wycena przeprowadzki jest przykładowa i może ulec zmianie.</p>
                 <form action="">
-                    <input type="text" name="" id="" placeholder="Imię i nazwisko">
-                    <input type="email" name="" id="" placeholder="Adres e-mail">
-                    <input type="tel" name="" id="" placeholder="Numer telefonu">
-                    <input type="text" name="" id="" placeholder="Warszawa">
+                    <label for="">
+                            <input type="text" name="" id="" placeholder="Imię i nazwisko">
+                            <input type="email" name="" id="" placeholder="Adres e-mail">
+                            <input type="tel" name="" id="" placeholder="Numer telefonu">
+                    </label>
+                    <label for="">
+                            <input type="text" name="" id="" placeholder="Warszawa">
+                            <input type="text" name="" id="" placeholder="Które piętro">
+                            <div class="check-box-field">
+                                    <input class="checkbox" type="checkbox" name="" id="" placeholder="Jest winda">
+                                    <span class="checked-box">Jest winda</span>
+                            </div>
+                            <div class="check-box-field">
+                                    <input class="checkbox" type="checkbox" name="" id="" placeholder="Brak windy">
+                                    <span class="checked-box">Brak windy</span>
+                            </div>
+                    </label>
+                   <label for="">
+                        <input type="text" name="" id="" placeholder="Przeprowadzka do">
                     <input type="text" name="" id="" placeholder="Które piętro">
-                    <input type="checkbox" name="" id="" placeholder="Jest winda">
-                    <input type="checkbox" name="" id="" placeholder="Brak windy">
-                    <input type="text" name="" id="" placeholder="Przeprowadzka do">
-                    <input type="text" name="" id="" placeholder="Które piętro">
-                    <input type="checkbox" name="" id="" placeholder="Jest winda">
-                    <input type="checkbox" name="" id="" placeholder="Brak windy">
-                    <input type="date" name="" id="" placeholder="Planowana data">
-                    <input type="checkbox" name="" id="" placeholder="Przeprowadzka">
-                    <input type="checkbox" name="" id="" placeholder="Pakowanie">
-                    <input type="checkbox" name="" id="" placeholder="Magazynowanie">
+                    <div class="check-box-field">
+                            <input class="checkbox" type="checkbox" name="" id="" placeholder="Jest winda">
+                            <span class="checked-box">Jest winda</span>
+                    </div>
+                    <div class="check-box-field">
+                            <input class="checkbox" type="checkbox" name="" id="" placeholder="Brak windy">
+                            <span class="checked-box">Brak windy</span>
+                    </div>
+                   </label>
+                   <label for="">
+                        <input type="date" name="" id="" placeholder="Planowana data">
+                        <div class="check-box-field last-checklist">
+                                <input class="checkbox" type="checkbox" name="" id="">
+                                <span class="checked-box">Przeprowadzka</span>
+                        </div>
+                        <div class="check-box-field last-checklist">
+                                <input class="checkbox" type="checkbox" name="" id="">
+                                <span class="checked-box">Pakowanie</span>
+                        </div>
+                        <div class="check-box-field last-checklist">
+                                <input class="checkbox" type="checkbox" name="" id="">
+                                <span class="checked-box">Magazynowanie</span>
+                        </div>
+                   </label>
+                   <input class="submit" type="submit" value="Wyceń przeprowadzkę">
                 </form>
             </div>
         </section>
@@ -178,7 +210,7 @@
                         <a href="#">Ubezpieczenie przeprowadzki</a>
                     </li>
                     <li>
-                        <a href="#">Wyceń przeprowadzkę</a>
+                        <a href="./wycena.html">Wyceń przeprowadzkę</a>
                     </li>
                     <li>
                         <a href="#">Firma w liczbach</a>
@@ -201,7 +233,16 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
+        <script>
+                $( document ).ready(function() {
+                $('.check-box-field').on('click', function(){
+
+                    $(this).toggleClass('checked');
+                })
+            });
+        </script>
     <script src="./js/main.js"></script>
+  
 </body>
 
 </html>
