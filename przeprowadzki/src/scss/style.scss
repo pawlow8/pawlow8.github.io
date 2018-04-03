@@ -420,8 +420,8 @@ main {
 .main-offer_rowbx--block {
     color: #ffffff;
     max-width: 300px;
-    padding: 25px;
-    height: 250px;
+    padding: 5px 25px;
+    height: 220px;
     background-color: $base-red;
     width: 100%;
     display: flex;
@@ -1065,7 +1065,7 @@ main {
         right: 5%;
     }
     .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 133px;
+        margin-top: 163px;
     }
     .main-page header:before {
         background-image: url('../img/bg-tablet.png');
@@ -1122,6 +1122,9 @@ main {
 }
 
 @media (max-width: 1516px) {
+    .main-page .main-offer_rowbx {
+        max-width: 650px;
+    }
     main.about section {
         margin-left: 3%;
     }
@@ -1140,7 +1143,7 @@ main {
     }
     main.about section .small-container-about-text,
     main.about section .small-container-about-text.career {
-        max-width: 500px;
+        max-width: 450px;
     }
     section.clients .small-container-about-text.clients {
         max-width: 700px;
@@ -1189,7 +1192,7 @@ main {
         top: 140px;
     }
     main .small-offer-box .small-offer-box_block {
-        max-width: 280px;
+        max-width: 270px;
         padding: 20px 0 20px 20px;
         font-size: 14px;
     }
@@ -1250,6 +1253,9 @@ main {
     }
     .main-page .main-offer_rowbx {
         max-width: 900px;
+    }
+    main .small-offer-box .small-offer-box_block {
+        max-width: 420px;
     }
 }
 
@@ -1322,7 +1328,44 @@ main {
         max-width: 350px;
     }
 }
-
+@media (max-width: 1151px) {
+    .small-offer-box {
+        justify-content: center;
+        align-items: center;
+        h5 {
+            width: 200px;
+            margin-top: 10px;
+        }
+    }
+    .img-box {
+        width: 55px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    main.about {
+        width: 100%;
+        aside {
+            max-width: 100%;
+            width: 100%;
+            align-items: center;
+            .side-menu {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 600px;
+                li {
+                    max-width: 100%;
+                }
+            }
+            h3,
+            p {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
 @media (max-width: 868px) {
     .small-offer-box {
         justify-content: center;
@@ -1366,6 +1409,9 @@ main {
     main.about section .small-container-about-text,
     main.about section .small-container-about-info {
         max-width: 100%;
+    }
+    main.about section .small-container-about-info {
+        align-items: flex-start;
     }
     main.about section .small-about-box p {
         max-width: 250px;
@@ -1439,12 +1485,14 @@ main {
 }
 
 @media (max-width: 431px) {
+    .main-page header:before {
+        min-height: 1058px;
+    }
     .main-offer_rowbx--block,
     .main-offer_rowbx--block h4 {
         max-width: 100%;
     }
     .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 1px;
         align-items: center;
         justify-content: space-around;
     }
@@ -1525,15 +1573,15 @@ main {
     }
 }
 
-@media (max-width: 430px) {
+@media (min-width: 432px) and (max-width: 655px) {
     .main-page header:before {
-        min-height: 1042px;
+        min-height: auto;
     }
 }
 
-@media (max-width: 516px) {
+@media (min-width: 505px) and (max-width: 516px) {
     .main-page header:before {
-        max-height: 901px;
+        min-height: 901px;
     }
     header .small-header_menu ul li {
         margin-left: auto;
@@ -1542,8 +1590,7 @@ main {
         margin-bottom: 0;
     }
 }
-
-@media (max-width: 504px) {
+@media (min-width: 432px) and (max-width: 504px) {
     .main-page header:before {
         min-height: 1006px;
     }
