@@ -190,11 +190,13 @@ main {
         .ask-que {
             max-width: 480px;
             width: 100%;
-            padding-top: 8px;
+            padding-top: 40px;
             align-content: center;
             align-items: center;
+            justify-content: center;
+            max-height: 440px;
             img {
-                height: 70px;
+                height: 50px;
                 vertical-align: middle;
                 margin-bottom: 30px;
                 margin-right: 20px;
@@ -202,7 +204,7 @@ main {
             h4 {
                 display: inline-block;
                 max-width: 315px;
-                font-size: 36px;
+                font-size: 26px;
                 font-weight: 700;
                 vertical-align: middle;
                 color: #212121;
@@ -211,17 +213,17 @@ main {
         }
         .ui-accordion {
             h3 {
-                font-size: 18px;
+                font-size: 16px;
                 color: #6e6e6e;
                 font-weight: 700;
                 outline: 0;
                 cursor: pointer;
-                padding-bottom: 20px;
+                padding-bottom: 15px;
             }
             h3:before {
                 content: url('../img/ico-ask-1.png');
-                width: 26px;
-                height: 26px;
+                width: 24px;
+                height: 24px;
                 display: inline-block;
                 vertical-align: bottom;
                 margin-right: 10px;
@@ -502,6 +504,7 @@ main {
     background-size: cover;
     background-position: center;
     justify-content: flex-start;
+    align-items: center;
     padding: 0;
 }
 
@@ -691,7 +694,7 @@ main.about {
                 color: #ffffff;
                 font-weight: 700;
                 text-align: center;
-                font-size: 14px;
+                font-size: 13px;
             }
             p.small-container-about-info_paragraph {
                 font-size: 18px;
@@ -866,12 +869,12 @@ section.clients {
             }
             .slick-prev {
                 display: block;
-                top: -65px;
+                top: -55px;
                 left: 250px;
             }
             .slick-next {
                 display: block;
-                top: -65px;
+                top: -55px;
                 left: 300px;
             }
             .slick-next:before,
@@ -1125,31 +1128,59 @@ main {
     .main-page .main-offer_rowbx {
         max-width: 650px;
     }
+    main.about section.contact form textarea {
+        max-width: 370px;
+    }
+    main .main-offer {
+        align-items: center;
+    }
+    main .main-offer .ask-que {
+        padding-top: 10px;
+    }
+    main .main-offer .ask-que h4 {
+        font-size: 36px;
+    }
+    main .main-offer .ask-que img {
+        height: 70px;
+    }
+    main .main-offer .ui-accordion h3 {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
     main.about section {
         margin-left: 3%;
     }
-    main.about section.contact {
-        margin-left: 2%;
+    main.about section .small-container-about-info.offer {
+        max-width: 320px;
+    }
+    main.about section.contact .small-container-about-text p {
+        padding-right: 30px;
     }
     main.about section .small-container-about-text.offer p {
-        padding-right: 3%;
+        padding-right: 35px;
     }
     main.about section .small-container-about-info {
         max-width: 300px;
-        margin-top: 44px;
+        margin-top: 42px;
+    }
+    main.about section .small-container-about-info.offer.mdz {
+        margin-top: 72px;
     }
     main.about section .small-container-about-info a {
         padding-left: 0;
     }
-    main.about section .small-container-about-text,
-    main.about section .small-container-about-text.career {
+    main.about section .small-container-about-text {
         max-width: 450px;
+    }
+    main.about section .small-container-about-text.career .accordion-container {
+        max-width: 450px;
+        padding-right: 50px;
     }
     section.clients .small-container-about-text.clients {
         max-width: 700px;
     }
     main .small-container-about-text h3 b {
-        font-size: 32px;
+        font-size: 30px;
     }
     main.about section .small-about-box {
         align-items: center;
@@ -1174,7 +1205,13 @@ main {
 
 @media (min-width: 1280px) {
     .main-page header:before {
-        top: 150px;
+        top: 189px;
+    }
+}
+
+@media (min-width: 1170px) and (max-width: 1220px) {
+    main.about section .small-container-about-text.career {
+        max-width: 700px;
     }
 }
 
@@ -1189,16 +1226,19 @@ main {
         font-size: 24px;
     }
     .main-page header:before {
-        top: 140px;
+        top: 158px;
     }
     main .small-offer-box .small-offer-box_block {
-        max-width: 270px;
+        max-width: 278px;
         padding: 20px 0 20px 20px;
         font-size: 14px;
     }
 }
 
 @media (max-width: 1200px) {
+    main.about section.contact {
+        flex-direction: column;
+    }
     .banner-container_box--block {
         color: $base-red;
         h3 {
@@ -1521,10 +1561,10 @@ main {
 
 @media (min-width: 869px) and (max-width: 1254px) {
     main.about section .small-container-about-text {
-        max-width: 400px;
+        max-width: 410px;
     }
-    main.about section .small-container-about-info {
-        margin-top: 76px;
+    main.about section .small-container-about-info.offer {
+        margin-top: 42px;
     }
 }
 
