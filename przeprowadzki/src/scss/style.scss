@@ -963,6 +963,7 @@ main.about {
                 top: 100px;
                 z-index: 3;
                 font-weight: 700;
+                font-size: 13px;
             }
         }
         form {
@@ -997,7 +998,7 @@ main.about {
                 min-height: 300px;
                 display: block;
             }
-            input[type="submit"] {
+            input.submit {
                 padding: 20px;
                 background-color: $base-red;
                 color: #fff;
@@ -1123,7 +1124,21 @@ main {
         max-width: 780px;
     }
 }
-
+@media (min-width: 517px) and (max-width: 1516px) {
+    main .main-offer .ask-que {
+        padding-top: 10px;
+    }
+    main .main-offer .ask-que h4 {
+        font-size: 36px;
+    }
+    main .main-offer .ask-que img {
+        height: 70px;
+    }
+    main .main-offer .ui-accordion h3 {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+}
 @media (max-width: 1516px) {
     .main-page .main-offer_rowbx {
         max-width: 650px;
@@ -1137,15 +1152,8 @@ main {
     main .main-offer .ask-que {
         padding-top: 10px;
     }
-    main .main-offer .ask-que h4 {
-        font-size: 36px;
-    }
-    main .main-offer .ask-que img {
-        height: 70px;
-    }
-    main .main-offer .ui-accordion h3 {
-        font-size: 18px;
-        padding-bottom: 20px;
+    main.about section {
+        margin-left: 3%;
     }
     main.about section {
         margin-left: 3%;
@@ -1301,7 +1309,7 @@ main {
 
 @media (max-width: 1170px) {
     .main-page header:before {
-        top: 214px;
+        top: 278px;
     }
     header .main-header {
         flex-direction: column;
@@ -1550,6 +1558,12 @@ main {
     .main-offer_rowbx--block h4 {
         margin-left: 0;
     }
+    footer .footer-tags {
+        
+        .footer-tags_box {
+            padding-right: 0;
+        }
+    }
 }
 
 @media (min-width: 1280px) {
@@ -1587,7 +1601,7 @@ main {
 
 @media (max-width: 639px) {
     .main-page header:before {
-        top: 374px;
+        top: 438px;
     }
     .small-container-about-text.clients .our-clients .client-box {
         max-width: 450px;
@@ -1604,6 +1618,13 @@ main {
     }
     body {
         overflow-x: hidden;
+    } 
+    main .main-offer .ask-que {
+        max-height: 700px;
+    }
+    .main-offer_rowbx--block.block6 {
+        justify-content: center;
+        align-items: flex-start;
     }
 }
 
@@ -1619,9 +1640,9 @@ main {
     }
 }
 
-@media (min-width: 505px) and (max-width: 516px) {
+@media (min-width: 300px) and (max-width: 516px) {
     .main-page header:before {
-        min-height: 901px;
+
     }
     header .small-header_menu ul li {
         margin-left: auto;
