@@ -1499,6 +1499,9 @@ main {
     main .small-container-about-text form input {
         max-width: 97%;
     }
+    main.about section {
+        margin-left: 0;
+    }
     main.about section .small-container-about-text.offer p, 
     footer, 
     main .small-container-about-text h3,
@@ -1510,14 +1513,41 @@ main {
     main.about section .small-container-about-info p.small-container-about-info_paragraph,
     main aside p,
     main.about section .small-about-box,
-    header .main-header_refer {
+    header .main-header_refer,
+    main.about section .small-container-about-text.career small,
+    .our-clients-opinion_slider, 
+    section.clients .small-container-about-text.clients .our-clients,
+    main.about section.contact form,
+    main.about section.contact .small-container-about-info {
         padding-right: 25px;
         padding-left: 25px;
         text-align: left;
     }
+    main aside .conact-info .contact-info_block .contact-info_block--text p {
+        padding: 0;
+    }
+    main aside .conact-info .contact-info_block  {
+        padding-left: 25px;
+    }
     header .main-header_refer {
         font-size: 22px;
         text-align: center;
+    }
+    main.about section .small-container-about-info .offer-bg-link a {
+        font-size: 12px;
+    }
+    main.about section .small-container-about-info a {
+        margin-left: 25px;
+        max-width: 250px;
+    }
+    main.about section.contact .small-about-box {
+        padding: 0;
+    }
+    section.clients .our-clients-opinion .our-clients-opinion_slider .slick-prev {
+        left: 270px;
+    }
+    section.clients .our-clients-opinion .our-clients-opinion_slider .slick-next {
+        left: 320px;
     }
     header.about .small-header, header.about .main-header {
         padding-left: 0;
@@ -1528,7 +1558,8 @@ main {
         font-size: 12px;
         width: 250px;
     }
-    main.about section .small-container-about-text.career .accordion-container .ui-accordion-header-icon {
+    main.about section .small-container-about-text.career .accordion-container .ui-accordion-header-icon
+     {
         margin-right: 10px;
     }
     main.about section .small-container-about-text.career .accordion-container {
@@ -1698,6 +1729,11 @@ main {
         margin-right: auto;
         margin-top: 20px;
         margin-bottom: 0;
+    }
+    main.about section .small-container-about-text.career .main-carrer-paragraph, 
+    main.about section .small-container-about-text.career small,
+    main.about section .small-container-about-text.career h4 {
+        max-width: 300px;
     }
 }
 @media (min-width: 505px) and (max-width: 516px) {
