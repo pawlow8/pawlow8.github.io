@@ -1452,7 +1452,8 @@ main {
         }
     }
     header.about h2 {
-        padding-left: 3%;
+        padding-left: 25px;
+        padding-right: 25px;
     }
     main.about section .small-container-about-text,
     main.about section .small-container-about-info {
@@ -1498,6 +1499,54 @@ main {
     main .small-container-about-text form input {
         max-width: 97%;
     }
+    main.about section .small-container-about-text.offer p, 
+    footer, 
+    main .small-container-about-text h3,
+    main.about section .small-container-about-info .offer-paragraph,
+    main.about section .small-container-about-text.career .main-carrer-paragraph,
+    main.about section .small-container-about-text p,
+    main.about section .small-container-about-text.career .accordion-container .ui-accordion-content, 
+    main.about section .small-container-about-text.career h4, 
+    main.about section .small-container-about-info p.small-container-about-info_paragraph,
+    main aside p,
+    main.about section .small-about-box,
+    header .main-header_refer {
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: left;
+    }
+    header .main-header_refer {
+        font-size: 22px;
+        text-align: center;
+    }
+    header.about .small-header, header.about .main-header {
+        padding-left: 0;
+    }
+    main.about section .small-container-about-text.career .accordion-container h3 {
+        margin-right: 25px;
+        margin-left: 25px;
+        font-size: 12px;
+        width: 250px;
+    }
+    main.about section .small-container-about-text.career .accordion-container .ui-accordion-header-icon {
+        margin-right: 10px;
+    }
+    main.about section .small-container-about-text.career .accordion-container {
+        margin-right: 40px;
+    }
+    footer .footer-description {
+       text-align: center;
+       p {
+           text-align: left;
+           font-size: 11px;
+       }
+    }
+    main aside .side-menu li {
+        padding-left: 25px;
+    }
+    .main-page header:before {
+        top: 273px;
+    }
 }
 
 @media (max-width: 840px) {
@@ -1534,7 +1583,7 @@ main {
 
 @media (max-width: 431px) {
     .main-page header:before {
-        min-height: 1058px;
+        min-height: 1042px;
     }
     .main-offer_rowbx--block,
     .main-offer_rowbx--block h4 {
@@ -1601,7 +1650,7 @@ main {
 
 @media (max-width: 639px) {
     .main-page header:before {
-        top: 438px;
+        top: 433px;
     }
     .small-container-about-text.clients .our-clients .client-box {
         max-width: 450px;
@@ -1640,7 +1689,7 @@ main {
     }
 }
 
-@media (min-width: 300px) and (max-width: 516px) {
+@media (min-width: 300px) and (max-width: 504px) {
     .main-page header:before {
 
     }
@@ -1649,6 +1698,11 @@ main {
         margin-right: auto;
         margin-top: 20px;
         margin-bottom: 0;
+    }
+}
+@media (min-width: 505px) and (max-width: 516px) {
+    .main-page header:before {
+    min-height: 901px;
     }
 }
 @media (min-width: 432px) and (max-width: 504px) {
@@ -1662,4 +1716,19 @@ main {
         margin-left: 0;
         height: 24px;
     }
+}
+@media (max-width: 404px) {
+    .main-page header:before {
+        min-height: 1058px;
+    }
+}
+@media (max-width: 350px) {
+    .main-page header:before {
+        min-height: 1091px;
+    }
+}
+@media (max-width: 333px) {
+.main-page header:before {
+    min-height: 1126px;
+}
 }
