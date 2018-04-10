@@ -933,7 +933,7 @@ main.about {
                 z-index: 2;
             }
             p.phone-consultant {
-                bottom: 50px;
+                bottom: 65px;
                 max-width: 300px;
                 background-color: $base-red;
                 color: #fff;
@@ -951,9 +951,7 @@ main.about {
                 max-width: 330px;
                 width: 100%;
                 height: auto;
-                position: relative;
-                top: -80px;
-                z-index: 1;
+                margin-top: 20px;
             }
             p {
                 background-color: $base-red;
@@ -1048,12 +1046,6 @@ main {
     }
 }
 
-@media (min-width: 1201px) and (max-width: 1280px) {
-    .small-offer-box {
-        margin-top: -40px;
-    }
-}
-
 @media (max-width: 1480px) {
     main .main-row .banner-container .banner-container_form {
         right: 1%;
@@ -1067,6 +1059,9 @@ main {
     .banner-container_form {
         position: absolute;
         right: 5%;
+    }
+    .main-page .main-offer_rowbx {
+        margin-bottom: 0;
     }
     .banner-container_box--block.primary-block .main-offer_rowbx--block {
         margin-top: 163px;
@@ -1540,6 +1535,9 @@ main {
         margin-left: 25px;
         max-width: 250px;
     }
+    main.about section.contact .small-container-about-info a {
+        margin-left: 0;
+    }
     main.about section.contact .small-about-box {
         padding: 0;
     }
@@ -1649,7 +1647,6 @@ main {
 @media (min-width: 1280px) {
     .main-page .main-offer_rowbx {
         margin-right: 30px;
-        margin-bottom: 0;
     }
 }
 
