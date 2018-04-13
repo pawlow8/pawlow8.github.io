@@ -777,15 +777,15 @@ main.about {
             margin-bottom: 30px;
             margin-right: auto;
             img {
-                height: 50px;
-                margin-right: 20px;
+                height: 40px;
+                margin-right: 10px;
             }
             p {
                 font-size: 16px;
                 b {
                     display: block;
                     font-weight: 700;
-                    font-size: 30px;
+                    font-size: 24px;
                     margin-bottom: 5px;
                 }
             }
@@ -1105,11 +1105,6 @@ main {
         margin-bottom: 0;
         margin-top: 60px;
     }
-    .main-page main {
-        position: relative;
-        top: -76px;
-
-    }
     .main-page {
         .main-offer {
             display: flex;
@@ -1371,9 +1366,6 @@ main {
             margin-right: 20px;
         }
     }
-    main.about section .small-about-box p b {
-        text-align: left;
-    }
 }
 
 @media (max-width: 960px) {
@@ -1387,14 +1379,18 @@ main {
         }
     }
     main.about section .small-about-box {
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
         img {
             margin-right: 20px;
         }
     }
+    main.about section .small-about-box p {
+        text-align: center;
+    }
     main.about section .small-about-box p b {
-        text-align: left;
+        text-align: center;
     }
     main aside {
         max-width: 350px;
@@ -1481,10 +1477,6 @@ main {
     }
     main.about section .small-container-about-info {
         align-items: flex-start;
-    }
-    main.about section .small-about-box p {
-        max-width: 250px;
-        width: 100%;
     }
 }
 
@@ -1789,6 +1781,16 @@ main {
         margin-right: auto;
         margin-top: 20px;
         margin-bottom: 0;
+    }
+    main.price {
+        .small-container-about-text {
+            form {
+                label {
+                    display: flex;
+                    flex-direction: column;
+                }
+            } 
+        }
     }
     .main-header_menu {
         display: none;
