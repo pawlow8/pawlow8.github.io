@@ -1596,6 +1596,9 @@ main {
         margin-bottom: 0;
         margin-top: 10px;
     }
+    .small-header_menu ul {
+        flex-direction: column;
+    }
     header .small-header_menu ul li {
         margin-bottom: 20px;
     }
