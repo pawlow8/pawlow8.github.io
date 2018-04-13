@@ -1,4 +1,9 @@
-$( function() {
+
+       $( document ).ready(function() {
+  $( '.ico-menu' ).click(function() {
+    $('.main-header_menu').slideToggle();
+  });
+  $( function() {
     $( "#accordion" ).accordion({
         collapsible: true
     });
@@ -39,3 +44,5 @@ $( function() {
       // instead of a settings object
     ]
   });
+});
+  

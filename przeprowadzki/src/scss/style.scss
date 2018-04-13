@@ -22,16 +22,11 @@ img {
     height: auto;
 }
 
-header,
-main,
-footer {
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
 header {
     padding-top: 20px;
     background-color: transparent;
+    z-index: 2;
+    position: relative;
     .main-header {
         justify-content: space-between;
         align-items: center;
@@ -39,7 +34,8 @@ header {
     }
     .main-header_logo {
         display: block;
-        max-width: 400px;
+        max-width: 300px;
+        margin-top: 20px;
     }
     .main-header_menu {
         ul {
@@ -70,8 +66,20 @@ header {
             color: $base-blue;
             font-weight: 700;
         }
+    }.main-header {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
     }
-    .small-header {
+    .small-header
+     {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
         ul {
             li {
                 display: flex;
@@ -110,83 +118,88 @@ main {
                     margin-right: 30px;
                 }
             }
-            .banner-container_form {
-                form {
-                    border: 4px solid $base-red;
-                    padding-right: 30px;
-                    padding-left: 40px;
-                    padding-top: 60px;
-                    padding-bottom: 60px;
-                    max-width: 500px;
+        }
+        .banner-container_form {
+            form {
+                border: 4px solid $base-red;
+                padding-right: 30px;
+                padding-left: 40px;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                max-width: 500px;
+            }
+            label {
+                color: #ffffff;
+                margin-bottom: 40px;
+                img {
+                    height: 70px;
+                    margin-right: 30px;
                 }
-                label {
-                    color: #ffffff;
-                    margin-bottom: 40px;
-                    img {
-                        height: 70px;
-                        margin-right: 30px;
-                    }
-                    b {
-                        font-size: 24px;
-                        font-weight: 700;
-                        display: block;
-                        margin-bottom: 5px;
-                    }
-                    span {
-                        font-size: 12px;
-                        font-weight: 700;
-                    }
-                }
-                input {
-                    display: block;
-                    background: none;
-                    outline: none;
-                    border: none;
-                    padding-bottom: 20px;
-                    padding-top: 20px;
-                    border-bottom: 1px solid #FFFFFF;
-                    max-width: 600px;
-                    width: 100%;
-                    font-size: 18px;
-                }
-                input:focus {
-                    font-size: 22px;
-                }
-                ::-webkit-input-placeholder,
-                input,
-                a {
-                    color: #FFFFFF;
-                }
-                .btn-send,
-                a {
-                    background-color: #fe3246;
-                    font-size: 13px;
-                    border: none;
-                    margin-top: 20px;
-                    min-height: 40px;
+                b {
+                    font-size: 24px;
                     font-weight: 700;
-                    width: 100%;
-                }
-                .btn-send:focus,
-                a:focus {
-                    font-size: 13px;
-                }
-                .btn-send {
-                    max-width: 130px;
-                    margin-right: 20px;
-                    cursor: pointer;
-                    padding: 0;
-                }
-                a {
-                    max-width: 230px;
                     display: block;
-                    text-align: center;
-                    line-height: 40px;
+                    margin-bottom: 5px;
                 }
+                span {
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+            input {
+                display: block;
+                background: none;
+                outline: none;
+                border: none;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                border-bottom: 1px solid #FFFFFF;
+                max-width: 600px;
+                width: 100%;
+                font-size: 18px;
+            }
+            input:focus {
+                font-size: 22px;
+            }
+            ::-webkit-input-placeholder,
+            input,
+            a {
+                color: #FFFFFF;
+            }
+            .btn-send,
+            a {
+                background-color: #fe3246;
+                font-size: 13px;
+                border: none;
+                margin-top: 20px;
+                min-height: 40px;
+                font-weight: 700;
+                width: 100%;
+            }
+            .btn-send:focus,
+            a:focus {
+                font-size: 13px;
+            }
+            .btn-send {
+                max-width: 130px;
+                margin-right: 20px;
+                cursor: pointer;
+                padding: 0;
+            }
+            a {
+                max-width: 230px;
+                display: block;
+                text-align: center;
+                line-height: 40px;
             }
         }
     }
     .main-offer {
+        max-width: 1500px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: auto;
+        margin-right: auto;
         .ask-que {
             max-width: 480px;
             width: 100%;
@@ -235,13 +248,14 @@ main {
                 color: $base-red;
             }
             .answer {
-                padding-bottom: 20px;
+                margin-bottom: 35px;
             }
         }
     }
     .small-offer-box {
+        width: 100%;
         .small-offer-box_block {
-            max-width: 300px;
+            max-width: 360px;
             width: 100%;
             padding: 25px 0 25px 25px;
             background-color: #000f36;
@@ -423,7 +437,7 @@ main {
     color: #ffffff;
     max-width: 300px;
     padding: 5px 25px;
-    height: 220px;
+    height: 250px;
     background-color: $base-red;
     width: 100%;
     display: flex;
@@ -522,24 +536,17 @@ main {
 }
 
 .main-page {
-    header:before {
-        content: " ";
-        position: absolute;
-        max-width: 1900px;
-        width: 100%;
-        display: block;
-        z-index: -1;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 170%;
-        max-height: 837px;
-        left: 0;
+    main {
+        padding-left: 0;
+        padding-right: 0;
     }
     .main-offer_rowbx {
-        max-width: 1200px;
+        max-width: 900px;
         width: 100%;
         margin-bottom: 40px;
+    }
+    footer {
+        margin-top: 0;
     }
 }
 
@@ -547,6 +554,10 @@ footer {
     margin-top: 60px;
     padding-bottom: 40px;
     .footer-tags {
+        max-width: 1440px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         border-bottom: 1px solid #dee2eb;
         padding-bottom: 30px;
         .footer-tags_box {
@@ -573,6 +584,10 @@ footer {
     }
     .footer-description {
         padding-top: 30px;
+        max-width: 1440px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         img {
             max-width: 150px;
         }
@@ -597,21 +612,24 @@ header.about {
         padding-left: 15%;
     }
     .main-header {
-        padding-right: 3%;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
         background-color: #ffffff;
-    }
-    .small-header,
-    .main-header {
-        padding-left: 3%;
     }
 }
 
 main.about {
     padding-left: 0;
     padding-right: 0;
+    section.contact {
+        max-width: 930px;
+    }
     section {
-        max-width: 1000px;
-        margin-left: 150px;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 60px;
         .small-container-about-text {
             max-width: 600px;
@@ -629,10 +647,9 @@ main.about {
             }
         }
         .small-container-about-text.career {
-            max-width: 1000px;
             .accordion-container {
-                max-width: 600px;
-                padding-right: 100px;
+                max-width: 450px;
+                margin-right: 150px;
                 h3 {
                     cursor: pointer;
                     background-color: $base-red;
@@ -654,7 +671,7 @@ main.about {
                     margin-right: 20px;
                 }
                 .ui-accordion-content {
-                    padding-bottom: 20px;
+                    margin-bottom: 20px;
                 }
             }
             .small-container-about-info {
@@ -664,6 +681,7 @@ main.about {
                 color: $base-blue;
                 font-weight: 700;
                 font-size: 18px;
+                padding-right: 25px;
             }
             h4 {
                 color: $base-red;
@@ -671,15 +689,17 @@ main.about {
                 font-size: 24px;
                 margin-top: 50px;
                 margin-bottom: 30px;
+                padding-right: 25px;
             }
             small {
                 font-size: 15px;
                 color: $base-blue;
                 font-weight: 700;
+                padding-right: 25px;
             }
         }
         .small-container-about-info {
-            max-width: 350px;
+            max-width: 300px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -778,7 +798,6 @@ main.about {
         }
         .small-about-box.inter-map {
             position: relative;
-            top: -60px;
             img {
                 height: auto;
             }
@@ -1036,19 +1055,8 @@ main {
     }
 }
 
-.banner-container_box--block.primary-block .main-offer_rowbx--block {
-    margin-top: 40px;
-}
-
-@media (min-width: 1600px) {
-    main.about section .small-container-about-text p {
-        padding-right: 50px;
-    }
-}
-
 @media (max-width: 1480px) {
-    main .main-row .banner-container .banner-container_form {
-        right: 1%;
+    main .main-row .banner-container_form {
         form {
             max-width: 370px;
         }
@@ -1056,55 +1064,75 @@ main {
 }
 
 @media (min-width: 1200px) {
-    .banner-container_form {
+    .main-row {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: url(../img/bg-tablet.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main.about section .small-container-about-text.career {
+        max-width: 1440px;
+    }
+    .banner-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1440px;
+        .banner-container_box--block.primary-block {
+            h3 {
+                margin-left: 75px;
+            }
+            .c-arrow {
+                max-width: 170px;
+            }
+        }
+    }
+    .main-offer_rowbx--block.special {
+        margin-left: 300px;
         position: absolute;
-        right: 5%;
+        top: -250px;
+        
     }
     .main-page .main-offer_rowbx {
         margin-bottom: 0;
-    }
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 163px;
-    }
-    .main-page header:before {
-        background-image: url('../img/bg-tablet.png');
+        position: relative;
     }
     .banner-container_box {
-        margin-top: 180px;
-        margin-left: 170px;
+        margin-left: 120px;
         margin-bottom: 0;
-    }
-    .banner-container_box--block {
-        color: $base-red;
-        h3 {
-            margin-left: 250px;
-            font-size: 18px;
-            margin-top: 30px;
-            display: block;
-        }
-        .c-arrow {
-            display: block;
-            position: absolute;
-            max-width: 190px;
-            left: 180px;
-            top: 360px;
-        }
+        margin-top: 60px;
     }
     .main-page main {
         position: relative;
-    }
-    main .main-row .banner-container .banner-container_form {
-        top: 4%;
+        top: -76px;
+
     }
     .main-page {
         .main-offer {
             display: flex;
-            flex-wrap: nowrap;
+            justify-content: space-between;
         }
     }
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        position: relative;
-        left: 300px;
+}
+@media (min-width: 1600px) {
+    main.about section .small-container-about-text p {
+        padding-right: 50px;
+    }
+    .main-row {
+        padding-top: 200px;
+        padding-bottom: 150px;
+    }
+}
+@media (min-width: 1400px) {
+    main.about section .small-container-about-text p {
+        padding-right: 50px;
+    }
+    .main-row {
+        padding-top: 150px;
+        padding-bottom: 100px;
     }
 }
 
@@ -1138,20 +1166,29 @@ main {
     .main-page .main-offer_rowbx {
         max-width: 650px;
     }
+    main .small-offer-box .small-offer-box_block {
+        padding: 20px 0 20px 20px;
+        font-size: 14px;
+        max-width: 280px;
+    }
     main.about section.contact form textarea {
         max-width: 370px;
     }
-    main .main-offer {
+    main .main-offer, 
+    footer .footer-tags,
+    footer .footer-description,
+    header .small-header,
+    header .main-header {
         align-items: center;
+        max-width: 1190px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     main .main-offer .ask-que {
         padding-top: 10px;
     }
-    main.about section {
-        margin-left: 3%;
-    }
-    main.about section {
-        margin-left: 3%;
+    main.about section.contact {
+        max-width: 930px;
     }
     main.about section .small-container-about-info.offer {
         max-width: 320px;
@@ -1160,14 +1197,14 @@ main {
         padding-right: 30px;
     }
     main.about section .small-container-about-text.offer p {
-        padding-right: 35px;
+        padding-right: 70px;
     }
     main.about section .small-container-about-info {
         max-width: 300px;
-        margin-top: 42px;
+        margin-top: 39px;
     }
     main.about section .small-container-about-info.offer.mdz {
-        margin-top: 72px;
+        margin-top: 36px;
     }
     main.about section .small-container-about-info a {
         padding-left: 0;
@@ -1175,15 +1212,15 @@ main {
     main.about section .small-container-about-text {
         max-width: 450px;
     }
-    main.about section .small-container-about-text.career .accordion-container {
-        max-width: 450px;
-        padding-right: 50px;
-    }
+   
     section.clients .small-container-about-text.clients {
         max-width: 700px;
     }
     main .small-container-about-text h3 b {
-        font-size: 30px;
+        font-size: 27px;
+    }
+    main .small-container-about-text h3 b.mdz {
+        font-size: 24px;
     }
     main.about section .small-about-box {
         align-items: center;
@@ -1204,11 +1241,9 @@ main {
     main.about section .small-container-about-info p.small-container-about-info_paragraph {
         text-align: center;
     }
-}
-
-@media (min-width: 1280px) {
-    .main-page header:before {
-        top: 189px;
+    main.about section .small-container-about-text.career .accordion-container {
+        max-width: 380px;
+        margin-right: 70px;
     }
 }
 
@@ -1219,7 +1254,7 @@ main {
 }
 
 @media (max-width: 1280px) {
-    main .main-row .banner-container .banner-container_form form {
+    main .main-row .banner-container_form form {
         max-width: 320px;
     }
     header .main-header_logo {
@@ -1228,38 +1263,32 @@ main {
     header .main-header_refer {
         font-size: 24px;
     }
-    .main-page header:before {
-        top: 158px;
-    }
-    main .small-offer-box .small-offer-box_block {
-        max-width: 278px;
-        padding: 20px 0 20px 20px;
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 1200px) {
     main.about section.contact {
         flex-direction: column;
     }
-    .banner-container_box--block {
-        color: $base-red;
-        h3 {
-            display: none;
-        }
-        .c-arrow {
-            display: none;
-        }
+    main .main-offer, footer .footer-tags, footer .footer-description, header .small-header, header .main-header {
+        max-width: 960px;
+    }
+    main .main-row {
+        background: #001d68;
+        padding-bottom: 50px;
+    }
+    .c-arrow {
+        display: none;
     }
     main .main-row .banner-container .banner-container_box {
         margin-top: 40px;
         margin-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
-    main .main-row .banner-container .banner-container_form form {
+    main .main-row .banner-container_form form {
         max-width: 500px;
-    }
-    .main-page header:before {
-        background: url("../img/bg-mobile.png");
+        margin-left: auto;
+        margin-right: auto;
     }
     .main-page {
         .main-offer {
@@ -1275,24 +1304,19 @@ main {
             margin-left: 0;
         }
     }
-    .banner-container_form {
-        position: static;
-    }
     .small-offer-box {
         margin-top: 40px;
     }
     .small-header_menu,
-    .banner-container_box--block.primary-block .main-offer_rowbx--block,
-    .main-page .main-offer_rowbx,
-    main .main-offer .ask-que,
+    main .main-offer .ask-que
         {
-        margin-left: auto;
-        margin-right: auto;
         justify-content: center;
     }
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 47px;
-        left: 0;
+    .main-page .main-offer_rowbx,
+    .small-header_menu,
+    main .main-offer .ask-que {
+        margin-left: auto;
+        margin-right: auto;
     }
     .main-page .main-offer_rowbx {
         max-width: 900px;
@@ -1303,11 +1327,17 @@ main {
 }
 
 @media (max-width: 1170px) {
-    .main-page header:before {
-        top: 278px;
-    }
     header .main-header {
         flex-direction: column;
+    }
+    main.about section .small-container-about-text.offer p,
+    main .small-container-about-text h3 {
+        padding-right: 0px;;
+    }
+    header.about h2 {
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     header .main-header_refer {
         text-align: center;
@@ -1320,14 +1350,13 @@ main {
         max-width: 235px;
         text-align: center;
     }
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 79px;
-    }
     header .main-header_refer p {
         text-align: center;
     }
     main.about section {
-        flex-direction: column;
+        padding-left: 30px;
+        max-width: 960px;
+        padding-right: 30px;
     }
     main.about section .small-container-about-info {
         max-width: 500px;
@@ -1371,10 +1400,8 @@ main {
         max-width: 350px;
     }
 }
-@media (max-width: 1151px) {
+@media (max-width: 1170px) {
     .small-offer-box {
-        justify-content: center;
-        align-items: center;
         h5 {
             width: 200px;
             margin-top: 10px;
@@ -1411,8 +1438,6 @@ main {
 }
 @media (max-width: 868px) {
     .small-offer-box {
-        justify-content: center;
-        align-items: center;
         h5 {
             width: 200px;
             margin-top: 10px;
@@ -1463,10 +1488,13 @@ main {
     }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 641px) {
     header .main-header_menu ul {
         flex-direction: row;
         width: auto;
+    }
+    .ico-menu {
+        display: none;
     }
 }
 
@@ -1480,17 +1508,7 @@ main {
         }
     }
 }
-
-@media (min-width: 767px) and (max-width: 840px) {
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 101px;
-    }
-}
-
-@media (max-width: 766px) {
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        margin-top: 37px;
-    }
+/* @media (max-width: 766px) {
     main .small-container-about-text form input {
         max-width: 97%;
     }
@@ -1498,7 +1516,6 @@ main {
         margin-left: 0;
     }
     main.about section .small-container-about-text.offer p, 
-    footer, 
     main .small-container-about-text h3,
     main.about section .small-container-about-info .offer-paragraph,
     main.about section .small-container-about-text.career .main-carrer-paragraph,
@@ -1564,7 +1581,6 @@ main {
         margin-right: 40px;
     }
     footer .footer-description {
-       text-align: center;
        p {
            text-align: left;
            font-size: 11px;
@@ -1573,19 +1589,20 @@ main {
     main aside .side-menu li {
         padding-left: 25px;
     }
-    .main-page header:before {
-        top: 273px;
-    }
 }
-
+*/
 @media (max-width: 840px) {
+    .main-page header .small-header_menu ul li {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
     header .small-header_menu ul li {
         margin-bottom: 20px;
     }
     header .small-header_menu ul li a {
         width: 320px;
     }
-    main .main-row .banner-container .banner-container_form form {
+    main .main-row .banner-container_form form {
         background: #000f36;
     }
     main .main-row .banner-container .banner-container_box h1 {
@@ -1610,28 +1627,6 @@ main {
     }
 }
 
-@media (max-width: 431px) {
-    .main-page header:before {
-        min-height: 1042px;
-    }
-    .main-offer_rowbx--block,
-    .main-offer_rowbx--block h4 {
-        max-width: 100%;
-    }
-    .banner-container_box--block.primary-block .main-offer_rowbx--block {
-        align-items: center;
-        justify-content: space-around;
-    }
-    .main-offer_rowbx--block h4 {
-        font-size: 20px;
-    }
-    .main-offer_rowbx--block {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-}
-
 @media (max-width: 560px) {
     .main-offer_rowbx--block h4 {
         margin-left: 0;
@@ -1644,9 +1639,82 @@ main {
     }
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 976px) {
     .main-page .main-offer_rowbx {
-        margin-right: 30px;
+        max-width: 600px;
+    }
+    main .small-offer-box,
+    footer .footer-tags,
+    footer .footer-description,
+    main .main-offer .ask-que {
+        max-width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: flex-start;
+    }
+    footer .footer-tags .footer-tags_box {
+        font-size: 13px;
+    }
+    main .small-offer-box .small-offer-box_block {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 417px) and (max-width: 676px) {
+    main .small-offer-box .small-offer-box_block {
+        max-width: 100%;
+    }
+    .main-page .main-offer_rowbx {
+        max-width: 340px;
+        .main-offer_rowbx--block {
+            max-width: 170px;
+            height: 170px;
+            img {
+                height: 30px;
+            }
+            h4, h3 {
+                font-size: 15px;
+                height: auto;
+            }
+            a {
+                img {
+                    height: 20px;
+                }
+            }
+        p {
+            font-size: 11px;
+        }
+        a {
+            height: 30px;
+        }
+    }
+}
+.main-offer_rowbx--block.block5 {
+ position: relative;
+    a {
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        height: 0px;
+        margin-top: 20px;
+    }
+    a.view {
+        position: relative;
+    }
+}
+}
+
+@media (max-width: 416px) {
+    .main-offer_rowbx--block {
+        max-width: 100%;
+        height: 250px;
+    }
+    .main-offer_rowbx--block.block5 a {
+        margin-left: 0;
+        height: 30px;
+        img {
+            height: 30px;
+        }
     }
 }
 
@@ -1655,7 +1723,7 @@ main {
         max-width: 410px;
     }
     main.about section .small-container-about-info.offer {
-        margin-top: 42px;
+        margin-top: 39px;
     }
 }
 
@@ -1677,9 +1745,6 @@ main {
 }
 
 @media (max-width: 639px) {
-    .main-page header:before {
-        top: 433px;
-    }
     .small-container-about-text.clients .our-clients .client-box {
         max-width: 450px;
     }
@@ -1698,10 +1763,11 @@ main {
     } 
     main .main-offer .ask-que {
         max-height: 700px;
+        justify-content: flex-start;
     }
     .main-offer_rowbx--block.block6 {
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 
@@ -1712,20 +1778,25 @@ main {
 }
 
 @media (min-width: 432px) and (max-width: 655px) {
-    .main-page header:before {
-        min-height: auto;
-    }
 }
 
-@media (min-width: 300px) and (max-width: 504px) {
-    .main-page header:before {
-
-    }
+@media (min-width: 300px) and (max-width: 640px) {
     header .small-header_menu ul li {
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
         margin-bottom: 0;
+    }
+    .main-header_menu {
+        display: none;
+    }
+    .ico-menu {
+        display: block;
+        height: 50px;
+        cursor: pointer;
+    }
+    header .main-header_menu ul {
+        text-align: center;
     }
     main.about section .small-container-about-text.career .main-carrer-paragraph, 
     main.about section .small-container-about-text.career small,
@@ -1733,14 +1804,23 @@ main {
         max-width: 300px;
     }
 }
-@media (min-width: 505px) and (max-width: 516px) {
-    .main-page header:before {
-    min-height: 901px;
+
+@media (max-width: 431px) {
+    .main-offer_rowbx--block,
+    .main-offer_rowbx--block h4 {
+        max-width: 100%;
     }
-}
-@media (min-width: 432px) and (max-width: 504px) {
-    .main-page header:before {
-        min-height: 1006px;
+    .main-offer_rowbx--block h4 {
+        font-size: 20px;
+    }
+    .main-offer_rowbx--block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .main-offer_rowbx--block.block6 {
+        justify-content: center;
+        align-items: flex-start;
     }
 }
 
@@ -1749,19 +1829,4 @@ main {
         margin-left: 0;
         height: 24px;
     }
-}
-@media (max-width: 404px) {
-    .main-page header:before {
-        min-height: 1058px;
-    }
-}
-@media (max-width: 350px) {
-    .main-page header:before {
-        min-height: 1091px;
-    }
-}
-@media (max-width: 333px) {
-.main-page header:before {
-    min-height: 1126px;
-}
 }
